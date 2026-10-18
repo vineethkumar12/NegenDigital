@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#1677E8" stop-opacity=".45"/><stop offset="1" stop-color="#071B38" stop-opacity="0"/></radialGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FD694"/><stop offset="1" stop-color="#087F8C"/></linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1677E8"/><stop offset="1" stop-color="#0B3A7A"/></linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E4C9E"/><stop offset="1" stop-color="#071B38"/></linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="#071B38"/>
+  <rect width="640" height="420" fill="url(#glow)"/>
+  <g stroke="#1677E8" stroke-opacity=".12">
+    <path d="M0 340 L320 400 L640 340 M0 300 L320 360 L640 300 M0 260 L320 320 L640 260"/>
+  </g>
+  <!-- cloud -->
+  <g transform="translate(320 120)">
+    <path d="M-86 40c-26 0-44-16-44-38 0-20 15-36 36-38 6-26 28-44 56-44 24 0 44 14 52 34 4-2 10-3 16-3 24 0 42 18 42 42 0 26-20 47-46 47z" fill="#0B3A7A" stroke="#4C9BF0" stroke-width="3"/>
+    <path d="M-30 24h60M0 -24v48" stroke="#3FD694" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-24" r="6" fill="#3FD694"/><circle cx="-30" cy="24" r="6" fill="#3FD694"/><circle cx="30" cy="24" r="6" fill="#3FD694"/>
+  </g>
+  <!-- isometric cubes -->
+  <g>
+    <g transform="translate(200 270)"><polygon points="0,0 50,-25 100,0 50,25" fill="url(#top)"/><polygon points="0,0 50,25 50,80 0,55" fill="url(#left)"/><polygon points="100,0 50,25 50,80 100,55" fill="url(#right)"/></g>
+    <g transform="translate(340 270)"><polygon points="0,0 50,-25 100,0 50,25" fill="#4C9BF0"/><polygon points="0,0 50,25 50,80 0,55" fill="url(#left)"/><polygon points="100,0 50,25 50,80 100,55" fill="url(#right)"/></g>
+    <g transform="translate(270 215)"><polygon points="0,0 50,-25 100,0 50,25" fill="url(#top)"/><polygon points="0,0 50,25 50,80 0,55" fill="url(#left)"/><polygon points="100,0 50,25 50,80 100,55" fill="url(#right)"/></g>
+  </g>
+  <g stroke="#3FD694" stroke-opacity=".6" stroke-width="2" stroke-dasharray="4 5"><path d="M320 175v35M250 255l40-20M390 255l-40-20"/></g>
+</svg>

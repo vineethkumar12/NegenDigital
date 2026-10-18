@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAF5F0"/><stop offset="1" stop-color="#E3EFFC"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12B76A"/><stop offset="1" stop-color="#1677E8"/></linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <!-- board -->
+  <rect x="60" y="50" width="520" height="320" rx="18" fill="#fff" stroke="#DCE6F0" stroke-width="2"/>
+  <rect x="60" y="50" width="520" height="44" rx="18" fill="#071B38"/>
+  <circle cx="86" cy="72" r="5" fill="#12B76A"/><circle cx="104" cy="72" r="5" fill="#1677E8"/><circle cx="122" cy="72" r="5" fill="#087F8C"/>
+  <text x="320" y="77" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#fff">Project Roadmap</text>
+  <!-- timeline -->
+  <line x1="110" y1="150" x2="530" y2="150" stroke="#DCE6F0" stroke-width="4" stroke-linecap="round"/>
+  <line x1="110" y1="150" x2="390" y2="150" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#fff" stroke="#12B76A" stroke-width="3"><circle cx="110" cy="150" r="11"/><circle cx="250" cy="150" r="11"/><circle cx="390" cy="150" r="11" stroke="#1677E8"/></g>
+  <circle cx="530" cy="150" r="11" fill="#fff" stroke="#DCE6F0" stroke-width="3"/>
+  <path d="M104 150l4 4 7-8M244 150l4 4 7-8" stroke="#12B76A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- cards -->
+  <g font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#071B38">
+    <rect x="80" y="190" width="120" height="150" rx="12" fill="#F2F7FC"/><text x="94" y="214">Discover</text>
+    <rect x="94" y="228" width="92" height="8" rx="4" fill="#12B76A" opacity=".7"/><rect x="94" y="246" width="70" height="8" rx="4" fill="#DCE6F0"/><rect x="94" y="264" width="80" height="8" rx="4" fill="#DCE6F0"/>
+    <rect x="212" y="190" width="120" height="150" rx="12" fill="#F2F7FC"/><text x="226" y="214">Define</text>
+    <rect x="226" y="228" width="92" height="8" rx="4" fill="#087F8C" opacity=".7"/><rect x="226" y="246" width="60" height="8" rx="4" fill="#DCE6F0"/><rect x="226" y="264" width="84" height="8" rx="4" fill="#DCE6F0"/>
+    <rect x="344" y="190" width="120" height="150" rx="12" fill="#F2F7FC"/><text x="358" y="214">Design</text>
+    <rect x="358" y="228" width="92" height="8" rx="4" fill="#1677E8" opacity=".7"/><rect x="358" y="246" width="74" height="8" rx="4" fill="#DCE6F0"/><rect x="358" y="264" width="52" height="8" rx="4" fill="#DCE6F0"/>
+    <rect x="476" y="190" width="84" height="150" rx="12" fill="#F2F7FC"/><text x="490" y="214">Deliver</text>
+    <rect x="490" y="228" width="56" height="8" rx="4" fill="#DCE6F0"/><rect x="490" y="246" width="40" height="8" rx="4" fill="#DCE6F0"/>
+  </g>
+</svg>

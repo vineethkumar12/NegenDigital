@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCEBFB"/><stop offset="1" stop-color="#F6FAFE"/>
+    </linearGradient>
+    <linearGradient id="glassA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4C9BF0"/><stop offset="1" stop-color="#0B3A7A"/>
+    </linearGradient>
+    <linearGradient id="glassB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B5FB8"/><stop offset="1" stop-color="#071B38"/>
+    </linearGradient>
+    <linearGradient id="glassC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8CC4F7"/><stop offset="1" stop-color="#2F7BD0"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12B76A"/><stop offset="0.6" stop-color="#087F8C"/><stop offset="1" stop-color="#1677E8"/>
+    </linearGradient>
+    <pattern id="win" width="14" height="16" patternUnits="userSpaceOnUse">
+      <rect width="12" height="1.5" y="0" fill="#fff" opacity=".35"/>
+      <rect width="1.5" height="16" x="0" fill="#fff" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="440" fill="url(#sky)"/>
+  <circle cx="520" cy="80" r="120" fill="#fff" opacity=".5"/>
+  <!-- back buildings -->
+  <rect x="230" y="190" width="70" height="250" fill="url(#glassC)"/>
+  <rect x="230" y="190" width="70" height="250" fill="url(#win)"/>
+  <rect x="560" y="150" width="60" height="290" fill="url(#glassC)"/>
+  <rect x="560" y="150" width="60" height="290" fill="url(#win)"/>
+  <!-- main tower: left face + right face -->
+  <polygon points="300,60 420,30 420,440 300,440" fill="url(#glassA)"/>
+  <polygon points="300,60 420,30 420,440 300,440" fill="url(#win)"/>
+  <polygon points="420,30 540,70 540,440 420,440" fill="url(#glassB)"/>
+  <polygon points="420,30 540,70 540,440 420,440" fill="url(#win)"/>
+  <polygon points="300,60 420,30 540,70 420,100" fill="#9FD0FA" opacity=".8"/>
+  <line x1="420" y1="30" x2="420" y2="440" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+  <!-- secondary tower -->
+  <polygon points="140,170 230,150 230,440 140,440" fill="url(#glassB)"/>
+  <polygon points="140,170 230,150 230,440 140,440" fill="url(#win)"/>
+  <!-- ground + wave -->
+  <path d="M0 400 C120 380 240 420 360 395 C470 372 560 340 640 300 L640 440 L0 440 Z" fill="url(#wave)" opacity=".9"/>
+  <path d="M0 425 C140 405 280 440 420 410 C520 390 590 370 640 345" stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none"/>
+  <!-- tree-like green blobs -->
+  <circle cx="90" cy="410" r="28" fill="#12B76A" opacity=".85"/>
+  <circle cx="125" cy="420" r="22" fill="#087F8C" opacity=".85"/>
+</svg>

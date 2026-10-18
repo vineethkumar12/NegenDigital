@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3EFFC"/><stop offset="1" stop-color="#EAF5F0"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12B76A"/><stop offset="1" stop-color="#1677E8"/></linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <!-- connectors -->
+  <g stroke="#1677E8" stroke-opacity=".35" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="320" y1="210" x2="130" y2="100"/><line x1="320" y1="210" x2="510" y2="100"/>
+    <line x1="320" y1="210" x2="130" y2="320"/><line x1="320" y1="210" x2="510" y2="320"/>
+  </g>
+  <!-- hub -->
+  <circle cx="320" cy="210" r="62" fill="#071B38"/>
+  <circle cx="320" cy="210" r="62" stroke="url(#g)" stroke-width="4"/>
+  <path d="M296 238V182h12l24 36v-36h12v56h-12l-24-36v36z" fill="url(#g)"/>
+  <!-- profile cards -->
+  <g font-family="Inter,sans-serif" font-weight="600" font-size="12" fill="#071B38">
+    <g transform="translate(60 60)"><rect width="150" height="80" rx="14" fill="#fff" stroke="#DCE6F0"/><circle cx="34" cy="40" r="18" fill="#12B76A" opacity=".85"/><text x="62" y="36">Data Engineer</text><rect x="62" y="46" width="64" height="7" rx="3.5" fill="#DCE6F0"/></g>
+    <g transform="translate(430 60)"><rect width="150" height="80" rx="14" fill="#fff" stroke="#DCE6F0"/><circle cx="34" cy="40" r="18" fill="#1677E8" opacity=".85"/><text x="62" y="36">AI/ML Engineer</text><rect x="62" y="46" width="64" height="7" rx="3.5" fill="#DCE6F0"/></g>
+    <g transform="translate(60 280)"><rect width="150" height="80" rx="14" fill="#fff" stroke="#DCE6F0"/><circle cx="34" cy="40" r="18" fill="#087F8C" opacity=".85"/><text x="62" y="36">ServiceNow</text><rect x="62" y="46" width="64" height="7" rx="3.5" fill="#DCE6F0"/></g>
+    <g transform="translate(430 280)"><rect width="150" height="80" rx="14" fill="#fff" stroke="#DCE6F0"/><circle cx="34" cy="40" r="18" fill="#071B38" opacity=".85"/><text x="62" y="36">Cloud Architect</text><rect x="62" y="46" width="64" height="7" rx="3.5" fill="#DCE6F0"/></g>
+  </g>
+</svg>

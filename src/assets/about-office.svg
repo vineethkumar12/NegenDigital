@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#CFE3FA"/><stop offset="1" stop-color="#F2F7FC"/></linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5AA6F2"/><stop offset="1" stop-color="#0B3A7A"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12B76A"/><stop offset="1" stop-color="#1677E8"/></linearGradient>
+    <pattern id="w" width="26" height="22" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="22" height="18" rx="2" fill="#fff" opacity=".28"/></pattern>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <!-- interior: wall of glass -->
+  <rect x="40" y="40" width="560" height="260" rx="14" fill="url(#gl)"/>
+  <rect x="40" y="40" width="560" height="260" rx="14" fill="url(#w)"/>
+  <!-- desks -->
+  <rect x="40" y="300" width="560" height="80" fill="#fff" opacity=".9"/>
+  <g>
+    <rect x="90" y="262" width="120" height="76" rx="6" fill="#071B38"/><rect x="98" y="270" width="104" height="58" rx="3" fill="#1677E8" opacity=".55"/>
+    <rect x="250" y="262" width="120" height="76" rx="6" fill="#071B38"/><rect x="258" y="270" width="104" height="58" rx="3" fill="#12B76A" opacity=".5"/>
+    <rect x="410" y="262" width="120" height="76" rx="6" fill="#071B38"/><rect x="418" y="270" width="104" height="58" rx="3" fill="#087F8C" opacity=".6"/>
+  </g>
+  <!-- network overlay -->
+  <g stroke="#fff" stroke-opacity=".6" stroke-width="2"><path d="M150 140L320 100L490 150M320 100L320 200M150 140L240 210L320 200L400 210L490 150"/></g>
+  <g fill="#fff"><circle cx="150" cy="140" r="9"/><circle cx="320" cy="100" r="12"/><circle cx="490" cy="150" r="9"/><circle cx="320" cy="200" r="9"/><circle cx="240" cy="210" r="7"/><circle cx="400" cy="210" r="7"/></g>
+  <circle cx="320" cy="100" r="6" fill="url(#g)"/>
+</svg>
