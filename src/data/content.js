@@ -14,47 +14,66 @@ import {
   Layers,
 } from 'lucide-react'
 
+/* ---------- Image Imports ---------- */
+import img1 from '../assets/capabiltiesimage1.png'
+import img2 from '../assets/capabiltiesimage2.png'
+import img3 from '../assets/capabiltiesimage3.png'
+import img4 from '../assets/capabiltiesimage4.png'
+import img5 from '../assets/capabiltiesimage5.png'
+import img6 from '../assets/capabiltiesimage6.png'
+
+/* ---------- Global Data ---------- */
 export const EMAIL = 'info@negendigital.com'
 
 export const navLinks = [
-  { label: 'Capabilities', to: '/' },
+  { label: 'Home', to: '/' },
+  { label: 'Capabilities', to: '/capabilities' },
   { label: 'Services', to: '/services' },
+  { label: 'Careers', to: '/careers' },
   { label: 'About Us', to: '/about' },
 ]
 
+/* ---------- Capabilities ---------- */
 export const capabilities = [
   {
     icon: Bot,
     title: 'Agentic AI',
     text: 'Design and implementation of AI agents and intelligent workflows. Focus on business process improvement, orchestration and responsible deployment.',
+    image: img1,
   },
   {
     icon: Database,
     title: 'Data Platform Modernization',
     text: 'Modernize data platforms for scalability, governance, performance, integration and maintainability.',
+    image: img2,
   },
   {
     icon: BarChart3,
     title: 'Advanced Data & Analytics',
     text: 'Turn data into insights with advanced analytics, visualization and AI/ML capabilities.',
+    image: img3,
   },
   {
     icon: Workflow,
     title: 'ServiceNow',
     text: 'ServiceNow workflow development, configuration, platform integration and process improvement.',
+    image: img4,
   },
   {
     icon: Cloud,
     title: 'Cloud & Data Engineering',
     text: 'Design and build scalable data pipelines and cloud-oriented engineering solutions.',
+    image: img5,
   },
   {
     icon: Network,
     title: 'Enterprise Integration & Automation',
     text: 'Connect systems, streamline workflows and reduce manual effort.',
+    image: img6,
   },
 ]
 
+/* ---------- Qualities ---------- */
 export const qualities = [
   { icon: Monitor, title: 'Responsive Design', text: 'Works beautifully on all devices' },
   { icon: Accessibility, title: 'Accessible', text: 'Built with WCAG 2.2 AA in mind' },
@@ -62,6 +81,7 @@ export const qualities = [
   { icon: Search, title: 'SEO Ready', text: 'Search-engine friendly structure' },
 ]
 
+/* ---------- Services ---------- */
 export const serviceBlocks = [
   {
     id: '01',
@@ -81,10 +101,10 @@ export const serviceBlocks = [
     image: 'staffing',
     text: 'We help organizations build high-performing technology teams. Our recruitment approach focuses on the right fit for your technical and cultural needs.',
     points: [
-      'Data engineering',
-      'AI and machine learning',
-      'ServiceNow roles',
-      'Cloud and enterprise technology',
+      'Client-focused',
+      'Flexible engagement',
+      'Engineering excellence',
+      'Built for growth'
     ],
     cta: 'Discuss Your Talent Needs',
   },
@@ -104,13 +124,6 @@ export const serviceBlocks = [
   },
 ]
 
-export const careerRoles = [
-  { icon: Database, title: 'Data Engineer' },
-  { icon: Brain, title: 'AI/ML Engineer' },
-  { icon: Layers, title: 'ServiceNow Consultant' },
-  { icon: Code2, title: 'Solution Architect' },
-]
-
 export const serviceOptions = [
   'Agentic AI',
   'Data Platform Modernization',
@@ -123,26 +136,12 @@ export const serviceOptions = [
   'Solution Architecture & Design',
 ]
 
-export const stats = [
-  { value: 'End-to-end', label: 'Strategy to delivery' },
-  { value: 'Cloud-first', label: 'Modern architecture' },
-  { value: 'Secure', label: 'By design' },
-  { value: 'Outcome-led', label: 'Partner focused' },
-]
-
-export const techStack = [
-  'Agentic AI & LLM Apps',
-  'Data Engineering',
-  'Cloud Platforms',
-  'ServiceNow Platform',
-  'Analytics & BI',
-  'Machine Learning',
-  'APIs & Integration',
-  'Workflow Automation',
-  'React & Modern Web',
-  'CI/CD & DevOps',
-  'Data Governance',
-  'Application Security',
+/* ---------- Careers & Process ---------- */
+export const careerRoles = [
+  { icon: Database, title: 'Data Engineer' },
+  { icon: Brain, title: 'AI/ML Engineer' },
+  { icon: Layers, title: 'ServiceNow Consultant' },
+  { icon: Code2, title: 'Solution Architect' },
 ]
 
 export const processSteps = [
@@ -166,4 +165,20 @@ export const careerAreas = [
   'Software Engineering',
   'Solution Architecture',
   'Consulting & Delivery',
+]
+
+/* ---------- Tech Stack ---------- */
+export const techStack = [
+  'Agentic AI & LLM Apps',
+  'Data Engineering',
+  'Cloud Platforms',
+  'ServiceNow Platform',
+  'Analytics & BI',
+  'Machine Learning',
+  'APIs & Integration',
+  'Workflow Automation',
+  'React & Modern Web',
+  'CI/CD & DevOps',
+  'Data Governance',
+  'Application Security',
 ]

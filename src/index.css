@@ -34,12 +34,12 @@
     @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition duration-200;
   }
   .btn-primary {
-    @apply btn bg-electric text-white hover:bg-[#0f63c4] hover:shadow-lg;
+    @apply btn bg-electric text-white hover:bg-[#046DA6] hover:shadow-lg;
   }
   .btn-outline {
     @apply btn border border-line bg-white text-navy hover:border-electric hover:text-electric;
   }
   .gradient-text {
-    @apply bg-brand-gradient bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-teal to-electric bg-clip-text text-transparent;
   }
 }

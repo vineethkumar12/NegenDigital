@@ -1,48 +1,72 @@
-import { ArrowRight } from 'lucide-react'
 import { careerRoles, careerAreas } from '../data/content.js'
 
 export default function Careers() {
   return (
-    <section id="careers" className="section bg-white !pt-10 !pb-14 lg:!pb-20">
+    <section id="careers" className="bg-slate-50/50 py-16 lg:py-24">
       <div className="container-x">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" data-aos="fade-up">
-          <div className="max-w-xl">
-            <h2 className="text-2xl font-bold sm:text-3xl">Careers</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-              Join a team working on next-generation data, AI, cloud and enterprise
+        
+        {/* Header */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
+          <div className="max-w-2xl">
+            <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-brand">
+              <span className="h-px w-6 bg-brand" /> Join Our Team
+            </p>
+            <h2 className="font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+              Careers at Negen Digital
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Join a team working on next-generation data, AI, cloud, and enterprise
               technology projects. We welcome experienced technology professionals who
-              are passionate about problem solving.
+              are passionate about solving complex challenges for our clients.
             </p>
           </div>
-          <p className="w-fit rounded-md bg-softblue px-3 py-2 text-xs font-medium text-electric">
-            These are example roles, not confirmed vacancies.
-          </p>
+          
+         
         </div>
 
-        <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Roles Grid */}
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {careerRoles.map(({ icon: Icon, title }, i) => (
-            <li key={title} data-aos="fade-up" data-aos-delay={i * 80}>
-              <div className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:-translate-y-1 hover:shadow-card">
-                <span className="grid h-11 w-11 place-items-center rounded-lg bg-mint text-teal">
-                  <Icon size={22} />
+            <li key={title} data-aos="fade-up" data-aos-delay={i * 100}>
+              <div className="group flex h-full flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-navy/15 hover:shadow-xl">
+                
+                {/* Icon */}
+                <span className="grid h-14 w-14 place-items-center rounded-full bg-slate-50 border border-slate-100 text-teal transition-colors duration-300 group-hover:bg-brand-gradient group-hover:text-white group-hover:border-transparent">
+                  <Icon size={24} strokeWidth={2} />
                 </span>
-                <h3 className="mt-4 text-base font-bold">{title}</h3>
-                <ArrowRight size={16} className="mt-6 self-end text-electric transition group-hover:translate-x-1" />
+                
+                {/* Title */}
+                <h3 className="mt-5 font-display text-lg font-bold text-navy">
+                  {title}
+                </h3>
+                
+                {/* Subtext - updated to match company focus */}
+                <p className="mt-2 text-xs leading-relaxed text-slate-500">
+                  Help build scalable, secure solutions for our enterprise clients.
+                </p>
+                
               </div>
             </li>
           ))}
         </ul>
 
-        <div data-aos="fade-up" className="mt-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted">Areas we hire in</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {careerAreas.map((a) => (
-              <li key={a} className="rounded-full border border-line bg-softblue px-4 py-1.5 text-xs font-medium text-navy">
-                {a}
+        {/* Areas We Hire In */}
+        <div data-aos="fade-up" className="mt-14 rounded-3xl border border-slate-200 bg-white p-8 text-center sm:p-10">
+          <h3 className="font-display text-lg font-bold text-navy">
+            Areas we hire in
+          </h3>
+          <ul className="mt-6 flex flex-wrap justify-center gap-3">
+            {careerAreas.map((area) => (
+              <li 
+                key={area} 
+                className="rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-sm font-medium text-slate-700 transition hover:border-brand/30 hover:bg-brand/5 hover:text-brand cursor-default"
+              >
+                {area}
               </li>
             ))}
           </ul>
         </div>
+
       </div>
     </section>
   )

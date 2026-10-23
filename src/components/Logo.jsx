@@ -1,17 +1,18 @@
-
-import logo from '../assets/logo.png'
+import logo from '../assets/newlogo.png'
 
 export default function Logo({ light = false, className = '' }) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className}`}>
+    <span className={`inline-flex items-center gap-1 ${className}`}>
+      {/* The Icon Image */}
       <img
         src={logo}
-        alt="Negen"
-        className="h-16 w-auto shrink-0 object-contain"
+        alt="Negen Icon"
+        className="h-9 sm:h-10 w-auto shrink-0 object-contain"
       />
 
+      {/* The Text */}
       <span
-        className={`font-display text-xl -ml-3 mb-2 font-bold tracking-tight ${
+        className={`font-display text-2xl mt-1 font-bold tracking-tight ${
           light ? 'text-white' : 'text-navy'
         }`}
       >

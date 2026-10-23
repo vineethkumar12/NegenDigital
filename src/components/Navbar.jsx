@@ -9,19 +9,44 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const { pathname } = useLocation()
 
-  useEffect(() => setOpen(false), [pathname])
+  // Close mobile menu when navigating to another route
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
 
+  // Header shadow and background on scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
+
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
+
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Prevent background scrolling when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+
     return () => {
       document.body.style.overflow = ''
+    }
+  }, [open])
+
+  // Close mobile menu using Escape key
+  useEffect(() => {
+    if (!open) return
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
     }
   }, [open])
 
@@ -40,25 +65,39 @@ export default function Navbar() {
           : 'border-transparent bg-white'
       }`}
     >
-      <nav className="container-x flex h-16 items-center justify-between lg:h-[72px]" aria-label="Primary">
+      <nav
+        className="container-x flex h-16 items-center justify-between lg:h-[72px]"
+        aria-label="Primary navigation"
+      >
+        {/* Logo */}
         <Link to="/" aria-label="Negen Digital home">
           <Logo />
         </Link>
 
+        {/* Desktop navigation */}
         <ul className="hidden items-center gap-9 lg:flex">
-          {navLinks.map((l) => (
-            <li key={l.to}>
-              <NavLink to={l.to} end className={linkClass}>
-                {l.label}
+          {navLinks.map((link) => (
+            <li key={link.to}>
+              <NavLink
+                to={link.to}
+                end={link.to === '/'}
+                className={linkClass}
+              >
+                {link.label}
               </NavLink>
             </li>
           ))}
         </ul>
 
-        <Link to="/about#contact" className="btn-primary hidden !py-2.5 lg:inline-flex">
+        {/* Desktop contact button */}
+        <Link
+          to="/about#contact"
+          className="btn-primary hidden !py-2.5 lg:inline-flex"
+        >
           Contact Us <ArrowRight size={15} />
         </Link>
 
+        {/* Mobile menu button */}
         <button
           type="button"
           className="grid h-10 w-10 place-items-center rounded-lg text-navy lg:hidden"
@@ -71,18 +110,24 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile overlay */}
+      {/* Mobile navigation overlay */}
       <div
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
-        aria-label="Menu"
+        aria-label="Navigation menu"
+        aria-hidden={!open}
+        inert={!open}
         className={`fixed inset-0 z-[60] flex flex-col bg-white transition duration-300 lg:hidden ${
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
+        {/* Mobile menu header */}
         <div className="container-x flex h-16 items-center justify-between">
-          <Logo />
+          <Link to="/" aria-label="Negen Digital home">
+            <Logo />
+          </Link>
+
           <button
             type="button"
             className="grid h-10 w-10 place-items-center rounded-lg text-navy"
@@ -92,29 +137,42 @@ export default function Navbar() {
             <X size={24} />
           </button>
         </div>
+
+        {/* Mobile links */}
         <ul className="container-x mt-4 flex flex-col">
-          {navLinks.map((l) => (
-            <li key={l.to} className="border-b border-line">
+          {navLinks.map((link) => (
+            <li key={link.to} className="border-b border-line">
               <NavLink
-                to={l.to}
-                end
+                to={link.to}
+                end={link.to === '/'}
+                onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `flex items-center justify-between py-4 text-base font-medium ${
                     isActive ? 'text-electric' : 'text-navy'
                   }`
                 }
               >
-                {l.label} <ChevronRight size={18} className="text-muted" />
+                {link.label}
+                <ChevronRight size={18} className="text-muted" />
               </NavLink>
             </li>
           ))}
+
           <li className="pt-6">
-            <Link to="/about#contact" className="btn-primary w-full">
+            <Link
+              to="/about#contact"
+              onClick={() => setOpen(false)}
+              className="btn-primary w-full"
+            >
               Contact Us <ArrowRight size={16} />
             </Link>
           </li>
         </ul>
-        <p className="container-x mt-auto pb-8 text-xs text-muted">{EMAIL}</p>
+
+        {/* Contact email */}
+        <p className="container-x mt-auto pb-8 text-xs text-muted">
+          {EMAIL}
+        </p>
       </div>
     </header>
   )

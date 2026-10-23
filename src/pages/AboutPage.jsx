@@ -9,13 +9,9 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <About />
-      <Careers />
+     
       <Contact />
-      <CtaBand
-        title="Have a specific technology challenge?"
-        text="Let’s talk about how we can help."
-        button="Contact Us"
-      />
+      
     </>
   )
 }

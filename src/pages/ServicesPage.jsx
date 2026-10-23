@@ -7,11 +7,7 @@ export default function ServicesPage() {
     <>
       <ServicesHero />
       <Services />
-      <CtaBand
-        title="Have a specific challenge in mind?"
-        text="Let’s find the right solution together."
-        button="Contact Us"
-      />
+      
     </>
   )
 }

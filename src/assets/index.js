@@ -2,9 +2,9 @@
 // the import path here, e.g.  import heroImg from './hero.jpg'
 // Every page imports from this file, so one change updates the whole site.
 import heroImg from './hero-building.svg'
-import consulting from './g1.png'
-import staffing from './staffing.svg'
-import architecture from './architecture.svg'
+import consulting from './consul.png'
+import staffing from './itrequirement.png'
+import architecture from './architecture.png'
 import aboutImg from './about-office.svg'
 import codeImg from './laptop-code.svg'
 
