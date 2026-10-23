@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Cpu, Database, Network, ShieldCheck, Users } from 'lucide-react'
 import heroImg from '../assets/g2.png'
 
-/* ---------- Professional Tech Visual ---------- */
+/* ---------- Professional Tech Visual (Desktop Only) ---------- */
 
 function TechMeshVisual() {
   return (
@@ -64,7 +64,6 @@ function TechMeshVisual() {
         </span>
       </div>
 
-      {/* Floating badges highlight Negen Digital's core capabilities */}
       <div className="absolute right-[10%] top-[20%] z-20 flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 shadow-xl animate-[bounce_6s_ease-in-out_infinite]">
         <Cpu className="h-4 w-4 text-brand" />
         <span className="text-xs font-bold text-navy">AI &amp; Data</span>
@@ -99,9 +98,10 @@ export default function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-slate-50">
-      {/* Background Image */}
+      
+      {/* Background Image - HIDDEN on mobile for a cleaner look, visible on lg+ */}
       <div
-        className="absolute inset-y-0 right-0 -z-20 w-full lg:w-[75%] lg:[mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.8)_25%,black_60%)] lg:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.8)_25%,black_60%)]"
+        className="absolute inset-y-0 right-0 -z-20 hidden w-full lg:block lg:w-[75%] lg:[mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.8)_25%,black_60%)] lg:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.8)_25%,black_60%)]"
         aria-hidden="true"
       >
         <img
@@ -109,7 +109,7 @@ export default function Hero() {
           src={heroImg}
           alt=""
           onLoad={() => setLoaded(true)}
-          className={`h-full w-full object-cover object-[65%_center] transition-all duration-[1500ms] ease-out will-change-transform lg:object-right motion-reduce:scale-100 motion-reduce:opacity-100 motion-reduce:blur-0 motion-reduce:transition-none ${
+          className={`h-full w-full object-cover object-[65%_center] transition-all duration-[1500ms] ease-out will-change-transform lg:object-right ${
             loaded ? 'scale-100 opacity-100 blur-0' : 'scale-[1.06] opacity-0 blur-sm'
           }`}
           fetchPriority="high"
@@ -117,16 +117,17 @@ export default function Hero() {
         />
       </div>
 
-      {/* Aurora Background & Tech Grid */}
+      {/* Aurora Background & Tech Grid - Adjusted for mobile */}
       <div className="absolute inset-0 -z-30 overflow-hidden" aria-hidden="true">
         <div className="absolute inset-0 bg-white" />
-        <div className="absolute -left-[10%] top-[20%] h-[60vh] w-[50vw] rounded-full bg-brand/15 blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute left-[5%] bottom-[10%] h-[50vh] w-[40vw] rounded-full bg-teal/15 blur-[120px] animate-[pulse_10s_ease-in-out_infinite_1s]" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDQwIEwgNDAgNDAgTCA0MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwNTg3Q0EiIHN0cm9rZS1vcGFjaXR5PSIwLjA2IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-60 [mask-image:linear-gradient(to_right,black_40%,transparent_100%)]" />
+        
+        {/* Glow effects - adjusted to look good on mobile */}
+        <div className="absolute -left-[10%] top-[10%] h-[40vh] w-[80vw] rounded-full bg-brand/10 blur-[100px] lg:top-[20%] lg:h-[60vh] lg:w-[50vw] lg:bg-brand/15 lg:blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[10%] left-[10%] h-[30vh] w-[70vw] rounded-full bg-teal/10 blur-[80px] lg:left-[5%] lg:h-[50vh] lg:w-[40vw] lg:bg-teal/15 lg:blur-[120px] animate-[pulse_10s_ease-in-out_infinite_1s]" />
+        
+        {/* Grid pattern - visible on desktop only */}
+        <div className="absolute inset-0 hidden bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDQwIEwgNDAgNDAgTCA0MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiMwNTg3Q0EiIHN0cm9rZS1vcGFjaXR5PSIwLjA2IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-60 [mask-image:linear-gradient(to_right,black_40%,transparent_100%)] lg:block" />
       </div>
-
-      {/* Mobile overlay */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-white/85 lg:hidden" aria-hidden="true" />
 
       {/* Fade into next section */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-white to-transparent" aria-hidden="true" />
@@ -134,38 +135,37 @@ export default function Hero() {
       <TechMeshVisual />
 
       {/* Hero Content */}
-      <div className="container-x flex min-h-[90vh] items-center pb-24 pt-32 lg:pt-40">
+      <div className="container-x flex min-h-[90vh] items-center pb-20 pt-28 sm:pb-24 sm:pt-32 lg:pt-40">
         <div className="relative z-20 max-w-[680px]">
-
-          {/* Eyebrow — describes the company, not a slogan */}
-          <div data-aos="fade-down" className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white px-4 py-1.5 shadow-sm">
+          
+          {/* Eyebrow */}
+          <div data-aos="fade-down" className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white/80 backdrop-blur-sm px-4 py-1.5 shadow-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-widest text-navy">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-navy">
               Technology consulting <span className="mx-1 text-teal">·</span> Digital transformation
             </span>
           </div>
 
-          {/* Main Heading — specific, not abstract */}
+          {/* Main Heading - reduced text size on mobile so it doesn't break awkwardly */}
           <h1
             data-aos="fade-up"
-            className="mt-8 text-4xl font-extrabold leading-[1.08] tracking-tight text-navy sm:text-5xl lg:text-[3.9rem]"
+            className="mt-6 sm:mt-8 text-4xl font-extrabold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-[3.9rem] lg:leading-[1.08]"
           >
             A Technology Partner
             <br />
-           
-            <span className="relative inline-block">
+            <span className="relative inline-block mt-1 sm:mt-0">
               <span className="relative z-10 bg-gradient-to-r from-brand via-teal to-electric bg-clip-text text-transparent">
                Focussed on Your Goals
               </span>
-              <span className="absolute bottom-2 left-0 -z-10 h-3 w-full bg-teal/30 blur-sm" />
+              <span className="absolute bottom-1 sm:bottom-2 left-0 -z-10 h-2 sm:h-3 w-full bg-teal/30 blur-sm" />
             </span>
           </h1>
 
-          {/* Description — pulled from your real company statement */}
+          {/* Description */}
           <p
             data-aos="fade-up"
             data-aos-delay="100"
-            className="mt-6 max-w-[580px] text-base font-medium leading-relaxed text-slate-700 sm:text-lg"
+            className="mt-5 sm:mt-6 max-w-[580px] text-sm sm:text-base font-medium leading-relaxed text-slate-700 lg:text-lg"
           >
             Negen Digital helps businesses accelerate digital transformation through Data & AI,
             modern data platforms, cloud engineering, ServiceNow, and digital automation. We also
@@ -173,15 +173,15 @@ export default function Hero() {
             they need to move forward.
           </p>
 
-          {/* Action Buttons */}
+          {/* Action Buttons - Stack full width on mobile, row on desktop */}
           <div
             data-aos="fade-up"
             data-aos-delay="200"
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+            className="mt-8 sm:mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
           >
             <Link
               to="/capabilities"
-              className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-navy px-8 py-4 font-bold text-white shadow-xl shadow-navy/20 transition-all hover:bg-brand hover:shadow-brand/30 hover:ring-2 hover:ring-brand/30 hover:ring-offset-2"
+              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2 overflow-hidden rounded-xl bg-navy px-8 py-3.5 sm:py-4 font-bold text-white shadow-xl shadow-navy/20 transition-all hover:bg-brand hover:shadow-brand/30 hover:ring-2 hover:ring-brand/30 hover:ring-offset-2"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
               Explore our services
@@ -190,26 +190,14 @@ export default function Hero() {
 
             <Link
               to="/about#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-white px-8 py-4 font-bold text-navy shadow-sm transition-all hover:border-brand/40 hover:bg-slate-50 hover:text-brand"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-white/80 backdrop-blur-sm px-8 py-3.5 sm:py-4 font-bold text-navy shadow-sm transition-all hover:border-brand/40 hover:bg-slate-50 hover:text-brand"
             >
               Talk to our team
               <ArrowRight size={18} className="text-slate-400 transition-transform group-hover:translate-x-1 group-hover:text-brand" />
             </Link>
           </div>
 
-          {/* Trust strip — real services, on the fold */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="300"
-            className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-slate-200 pt-6 text-sm text-slate-600"
-          >
-            <span className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-brand" />
-              Data & AI · Cloud · ServiceNow · Digital Automation
-            </span>
-            <span className="hidden h-4 w-px bg-slate-300 sm:block" />
-            <span>IT staffing &amp; technical recruitment</span>
-          </div>
+          
         </div>
       </div>
     </section>
